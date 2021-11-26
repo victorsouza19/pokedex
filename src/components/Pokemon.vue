@@ -62,6 +62,8 @@ export default {
       this.pokemon.back = res.data.sprites.back_default;
       this.currentImg = this.pokemon.front;
 
+      setInterval(this.setSprite, 10000);
+
       console.log(this.pokemon);
 
     }).catch(err => {
