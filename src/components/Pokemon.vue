@@ -1,16 +1,21 @@
 <template>
   <b-card
-    :img-src="currentImg"
-    img-alt="Image"
-    img-top
-    tag="article"
     style="max-width: 20rem;"
     class="mb-4">
     <b-card-text>
-      <!-- {{num}}  -->
+      <img :src="currentImg" alt="Pokemon">
       <h3>{{ upperFirstLetter }}</h3>
-      <p>{{ pokemon.type }}</p>
-      <b-button @click="setSprite" class="w-100" variant="outline-dark">Change Sprite</b-button>
+
+      <router-link :to="{name: 'Pokemon', params: {name: this.name, data: this.pokemonData}}">
+        <b-button class="w-100" variant="dark">
+          Show details
+        </b-button>
+      </router-link>
+
+      <b-button @click="setSprite" class="w-100 mt-2" variant="outline-dark">
+        Change Sprite
+      </b-button>
+
     </b-card-text>
   </b-card>
 
@@ -24,7 +29,7 @@ export default {
     return{
       isFront: true,
       currentImg: '',
-
+      pokemonData: {},
       pokemon: {
         type: '',
         front: '',
@@ -57,15 +62,11 @@ export default {
   },
   created: function(){
     axios.get(this.url).then(res => {
+      this.pokemonData = res.data;
       this.pokemon.type = res.data.types[0].type.name;
       this.pokemon.front = res.data.sprites.front_default;
       this.pokemon.back = res.data.sprites.back_default;
       this.currentImg = this.pokemon.front;
-
-      setInterval(this.setSprite, 10000);
-
-      console.log(this.pokemon);
-
     }).catch(err => {
       console.log(err);
     })
@@ -77,5 +78,6 @@ export default {
 <style scoped>
   h3{
     font-weight: 600;
+    margin-bottom: 2rem;
   }
 </style>
