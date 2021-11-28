@@ -4,9 +4,12 @@
 
 <img src="./src/assets/pokemon-logo.png" width="300" alt="pokemon img">
   
-![GitHub language count](https://img.shields.io/github/languages/count/victorsouza19/pokedex?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/victorsouza19/pokedex?style=for-the-badge)
-![Followers](https://img.shields.io/github/followers/victorsouza19?style=for-the-badge)
+![Badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Badge](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Badge](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![Badge](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
+![Badge](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+
 </div>
 
 
